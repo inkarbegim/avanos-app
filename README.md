@@ -4,5 +4,8 @@ Avanos NHS app
 
 # If SVGs stop working...
 
-1.  Try running `./app/cache.sh` to remove cache files
-2.  If that doesn't work, remove node_modules and reinstall
+1. Run watchman watch-del-all
+2. Remove node_modules and reinstall
+
+# Helful Expo tricks
+- Shake iPhone to get a bunch of options
