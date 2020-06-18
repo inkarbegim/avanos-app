@@ -1,9 +1,18 @@
 import * as React from "react";
-import { Outer, Inner, Background, TouchListener, Body } from "./styles";
+import {
+	Outer,
+	Inner,
+	Background,
+	TouchListener,
+	Body,
+	Footer,
+} from "./styles";
 import Chevron from "../../public/assets/chevron-right.svg";
-import { withRouter } from "react-router-native";
+import { useHistory } from "react-router-native";
 
-export const Panel = withRouter(({ history, link, icon, children, alert }) => {
+export const Panel = ({ link, icon, children, alert }) => {
+	const history = useHistory();
+
 	const [active, setActive] = React.useState(false);
 
 	const handlePress = () => {
@@ -37,4 +46,4 @@ export const Panel = withRouter(({ history, link, icon, children, alert }) => {
 			</Background>
 		</Outer>
 	);
-});
+};

@@ -17,6 +17,7 @@ export const Title = styled.Text`
 export const Paragraph = styled.Text`
 	font-family: ${theme.font.family.normal};
 	font-size: 18px;
+	line-height: 22px;
 	font-weight: normal;
 	color: ${theme.color.black};
 	margin: 0 0 5px;

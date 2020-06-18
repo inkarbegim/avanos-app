@@ -2,7 +2,11 @@ const theme = {
 	maxWidth: 450,
 	gutter: 20,
 	borderRadius: 3,
-	shadow: `box-shadow: 0 0 3px #00000029`,
+	shadow: `shadow-color: #000;
+	shadow-offset: {width: 5, height: 5};
+	shadow-opacity: 0.05;
+	shadow-radius: 5px;
+	elevation: 1`,
 	color: {
 		white: "#fefefe",
 		grey: "#dfdfdf",
@@ -21,12 +25,12 @@ const theme = {
 			if (side) {
 				return `
 				border-${side}-width: 0.5px;
-				border-${side}-color: #dfdfdf;
+				border-${side}-color: #dfdfdf
 				`;
 			} else {
 				return `
 				border-width: 0.5px;
-				border-color: #dfdfdf;
+				border-color: #dfdfdf
 				`;
 			}
 		},

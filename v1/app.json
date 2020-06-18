@@ -1,9 +1,10 @@
 {
 	"name": "Avanos App",
 	"displayName": "Avanos App",
+	"sdkVersion": "33.0.0",
 	"expo": {
 		"name": "Avanos App",
-		"slug": "Avanos App",
+		"slug": "avanos_app",
 		"version": "1.0.0",
 		"platforms": ["ios", "android", "web"],
 		"assetBundlePatterns": ["**/*"],
