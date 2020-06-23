@@ -11,3 +11,7 @@ export const LogoWrapper = styled(ScreenTitle.Outer)`
 	padding-top: ${({ theme }) => theme.gutter}px;
 	padding-bottom: 10px;
 `;
+
+export const Padding = styled.View`
+	height: ${hasNotch ? 40 : 10}px;
+`;

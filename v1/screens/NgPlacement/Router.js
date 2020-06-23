@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StepByStep } from "./StepByStep";
+import { StepByStep } from "../NgPlacement-OLD/StepByStep";
 import { AssembleEquipment, MeasureLengthOfTube } from "./screens";
 import { Switch, Route } from "react-router-native";
 
@@ -10,13 +10,13 @@ export const Router = ({ onLoad }) => {
 
 	return (
 		<Switch>
-			<Route path="/stepByStep" exact component={StepByStep} />
+			<Route path="/ngPlacement" exact component={StepByStep} />
 			<Route
-				path="/stepByStep/assembleEquipment"
+				path="/ngPlacement/assembleEquipment"
 				component={AssembleEquipment}
 			/>
 			<Route
-				path="/stepByStep/measureLengthOfTube"
+				path="/ngPlacement/measureLengthOfTube"
 				component={MeasureLengthOfTube}
 			/>
 		</Switch>

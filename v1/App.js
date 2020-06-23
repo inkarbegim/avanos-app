@@ -2,17 +2,17 @@ import * as React from "react";
 
 import * as ScreenOrientation from "expo-screen-orientation";
 
-import Home from "./screens/Home";
-import * as StepByStep from "./screens/StepByStep";
+import NgPlacement from "./screens/NgPlacement";
+// import * as StepByStep from "./screens/NgPlacement-OLD";
 import * as BedsidePlacement from "./screens/BedsidePlacement";
-import { ThemeProvider } from "styled-components/native";
+import MoreLinks from "./screens/MoreLinks";
 
 import theme from "./theme";
-import { NativeRouter, Route } from "react-router-native";
+import { NativeRouter, Route, Redirect } from "react-router-native";
 
+import { ThemeProvider } from "styled-components/native";
 import { useFonts } from "@use-expo/font";
 import { AppLoading } from "expo";
-import More from "./screens/More";
 
 import Layout from "./components/Layout";
 import MultipleChoiceQuestions from "./screens/MultipleChoiceQuestions";
@@ -36,11 +36,15 @@ export default function App() {
 			<NativeRouter>
 				<ThemeProvider theme={theme}>
 					<Layout>
-						<Route path="/" exact render={(props) => <Home />} />
+						<Redirect exact from="/" to="/ngPlacement" />
 						<Route
+							path="/ngPlacement"
+							render={(props) => <NgPlacement />}
+						/>
+						{/* <Route
 							path="/stepByStep"
 							render={(props) => <StepByStep.Router {...props} />}
-						/>
+						/> */}
 						<Route
 							path="/bedsidePlacement"
 							render={(props) => (
@@ -53,7 +57,10 @@ export default function App() {
 								<MultipleChoiceQuestions {...props} />
 							)}
 						/>
-						<Route path="/more" render={(props) => <More />} />
+						<Route
+							path="/moreLinks"
+							render={(props) => <MoreLinks {...props} />}
+						/>
 					</Layout>
 				</ThemeProvider>
 			</NativeRouter>

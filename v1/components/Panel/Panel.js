@@ -10,7 +10,7 @@ import {
 import Chevron from "../../public/assets/chevron-right.svg";
 import { useHistory } from "react-router-native";
 
-export const Panel = ({ link, icon, children, alert }) => {
+export const Panel = ({ link, icon, children }) => {
 	const history = useHistory();
 
 	const [active, setActive] = React.useState(false);

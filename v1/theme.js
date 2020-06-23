@@ -2,14 +2,16 @@ const theme = {
 	maxWidth: 450,
 	gutter: 20,
 	borderRadius: 3,
-	shadow: `shadow-color: #000;
-	shadow-offset: {width: 5, height: 5};
+	shadow: `
+	border: 1px solid #efefef;
+	shadow-color: #000;
+	shadow-offset: {width: 5, height: 2};
 	shadow-opacity: 0.05;
 	shadow-radius: 5px;
 	elevation: 1`,
 	color: {
 		white: "#fefefe",
-		grey: "#dfdfdf",
+		grey: "#efefef",
 		black: "#090909",
 		danger: "#ee4444",
 	},
@@ -20,17 +22,17 @@ const theme = {
 		},
 	},
 	border: {
-		danger: `border: 0.5px solid #ee4444`,
+		danger: `border: 1px solid #ee4444`,
 		light: (side) => {
 			if (side) {
 				return `
-				border-${side}-width: 0.5px;
-				border-${side}-color: #dfdfdf
+				border-${side}-width: 1px;
+				border-${side}-color: #efefef
 				`;
 			} else {
 				return `
-				border-width: 0.5px;
-				border-color: #dfdfdf
+				border-width: 1px;
+				border-color: #efefef
 				`;
 			}
 		},

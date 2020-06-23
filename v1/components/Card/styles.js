@@ -6,6 +6,28 @@ import { LinearGradient } from "expo-linear-gradient";
 const height = 410;
 const footerHeight = 60;
 
+export const AlertBackground = styled.ImageBackground.attrs({
+	source: require("../../public/assets/card-gradient.png"),
+})`
+	width: 100%;
+	height: 100%;
+	border-radius: ${theme.borderRadius}px;
+`;
+
+export const AlertIcon = styled.Image.attrs({
+	source: require("../../public/assets/alert-white.png"),
+})`
+	margin-bottom: ${theme.gutter * 3}px;
+`;
+
+export const AlertTitle = styled(Paragraph)`
+	font-family: ${theme.font.family.bold};
+	font-size: 24px;
+	line-height: 30px;
+	text-align: center;
+	color: ${theme.color.white};
+`;
+
 export const Outer = styled.View`
 	background-color: ${theme.color.white};
 	border-radius: ${theme.borderRadius}px;
@@ -14,7 +36,6 @@ export const Outer = styled.View`
 	height: ${height}px;
 	position: relative;
 	display: flex;
-
 	margin-bottom: ${theme.gutter}px;
 `;
 
@@ -22,8 +43,13 @@ export const Inner = styled.View`
 	padding: ${theme.gutter}px;
 	overflow: hidden;
 	flex: 1;
-
 	display: flex;
+	${({ center }) =>
+		center &&
+		`
+		padding: 72px ${theme.gutter * 2}px;
+		align-items: center;
+	`}
 `;
 
 export const Gradient = styled(LinearGradient).attrs({

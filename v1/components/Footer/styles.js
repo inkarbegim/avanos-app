@@ -1,6 +1,7 @@
 import styled from "styled-components/native";
 import { Paragraph } from "../styles";
 import { Link } from "react-router-native";
+// import { Animated } from "react-native";
 
 export const Wrapper = styled.View`
 	align-items: center;
@@ -12,7 +13,7 @@ export const Wrapper = styled.View`
 `;
 
 const hasNotch =
-	Platform.OS == "ios" &&
+	Platform.OS === "ios" &&
 	Expo.Constants.platform.ios.model.toLowerCase().includes("iphone x");
 
 export const Tab = {
@@ -23,12 +24,14 @@ export const Tab = {
 	Link: styled(Link)`
 		width: 25%;
 	`,
+	// Inner: styled(Animated.View)`
 	Inner: styled.View`
-		padding: 15px 0;
+		padding: 15px 0 0;
 		background-color: white;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		${({ active }) => (active ? `opacity: 1` : `opacity: 0.5`)};
 	`,
 };
 
