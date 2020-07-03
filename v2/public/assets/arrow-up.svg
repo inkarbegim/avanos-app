@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="master-artboard" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" style="enable-background:new 0 0 1400 980;" width="100px" height="100px"><rect id="ee-background" x="0" y="0" width="100" height="100" style="fill: rgb(255, 255, 255); fill-opacity: 0; pointer-events: none;"/><defs><style id="ee-google-fonts">@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic);</style><filter id="filter0_d" x="0" y="0" width="65" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter><clipPath id="clip0">
+<path d="M 0 55.5 H 55 V 109.5 H 0 V 55.5 Z" transform="rotate(-90 0 55.5)" fill="white"/>
+</clipPath><filter id="filter-1" x="0" y="0" width="65" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter><clipPath id="path-1">
+<path d="M 55 54 H 110 V 108 H 55 V 54 Z" transform="rotate(180 55 54)" fill="white"/>
+</clipPath><clipPath id="path-2">
+<path d="M 55 54 H 110 V 108 H 55 V 54 Z" transform="rotate(180 55 54)" fill="white"/>
+</clipPath><clipPath id="path-3">
+<path d="M 0 55.5 H 55 V 109.5 H 0 V 55.5 Z" transform="rotate(-90 0 55.5)" fill="white"/>
+</clipPath></defs>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<g transform="matrix(2.707815127678259e-8, -1.8232533931732178, 1.7899518013000488, 0.000003167200247844448, -0.2346727997065159, 99.2368240356445)"><g clip-path="url(#clip0)">
+<path d="M27 0.624999C41.8405 0.624998 53.875 12.879 53.875 28C53.875 43.121 41.8405 55.375 27 55.375C12.1595 55.375 0.124999 43.121 0.124999 28C0.124998 12.879 12.1595 0.624999 27 0.624999Z" fill="white" stroke="#C4C4C4" stroke-width="0.25"/>
+<path d="M13.8857 28C13.8857 28.3143 14.1943 28.6286 14.5029 28.6286L38.4172 28.6286L31.1657 36.0143C31.0115 36.1714 31.0115 36.6428 31.1657 36.8C31.32 36.9571 31.7829 36.9571 31.9372 36.8L40.1143 28.4714C40.2686 28.3143 40.2686 28.1571 40.2686 28C40.2686 27.8428 40.2686 27.6857 40.1143 27.5286L31.9372 19.2C31.7829 19.0428 31.32 19.0428 31.1657 19.2C31.0115 19.3571 31.0115 19.8286 31.1657 19.9857L38.4172 27.3714L14.3486 27.3714C14.04 27.3714 13.8857 27.6857 13.8857 28Z" fill="black"/>
+</g></g></svg>
