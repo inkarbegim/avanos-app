@@ -1,20 +1,22 @@
-import React from "react";
-import { Quiz } from "../../../components/Quiz";
-import questions from "./data/questions";
+import { useHistory, useParams } from "react-router-native";
 
-import { useParams, useHistory } from "react-router-native";
+import { Quiz } from "../../../components/Quiz";
+import React from "react";
+import questions from "./data/questions";
 
 export const CortrakUser = () => {
 	const { id } = useParams();
 	const history = useHistory();
 
-	const handleIndexChange = (id) => {
-		history.push(`/reference/cortrakUser/${id}`);
+	const handleIndexChange = (next, link = false) => {
+		if (!link) {
+			history.push(`/reference/cortrakUser/${next}`);
+		} else {
+			history.push(next);
+		}
 	};
 
-	return id ? (
+	return (
 		<Quiz questions={questions} id={id} onIdChange={handleIndexChange} />
-	) : (
-		<Error>No question id specified</Error>
 	);
 };

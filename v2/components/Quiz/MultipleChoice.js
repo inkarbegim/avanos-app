@@ -1,8 +1,10 @@
 import * as React from "react";
-import { Title } from "./styles";
-import Control from "../Control";
+
+import { ActivityIndicator } from "react-native";
 import Badge from "../Badge";
 import { Choice } from "../Panel";
+import Control from "../Control";
+import { Title } from "./styles";
 import Wrapper from "../Wrapper";
 
 export const MultipleChoice = ({ questions, onIndexChange, index }) => {
@@ -80,6 +82,6 @@ export const MultipleChoice = ({ questions, onIndexChange, index }) => {
 			</Badge>
 		</Wrapper.Scroll>
 	) : (
-		<Error>No question ID specified</Error>
+		<ActivityIndicator />
 	);
 };

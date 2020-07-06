@@ -1,22 +1,23 @@
 import * as React from "react";
-import {
-	Outer,
-	Inner,
-	Background,
-	TouchListener,
-	Body,
-	Footer,
-} from "./styles";
+
+import { Background, Body, Inner, Outer, TouchListener } from "./styles";
+
 import Chevron from "../../public/assets/chevron-right.svg";
+import { Linking } from "react-native";
 import { useHistory } from "react-router-native";
 
-export const Panel = ({ link, icon, children }) => {
+export const Panel = ({ link, icon, children, external }) => {
 	const history = useHistory();
 
 	const [active, setActive] = React.useState(false);
 
 	const handlePress = () => {
-		if (link) history.push(link);
+		console.log({ link, external });
+
+		if (link) {
+			if (external) Linking.openURL(link);
+			else history.push(link);
+		}
 	};
 
 	return (

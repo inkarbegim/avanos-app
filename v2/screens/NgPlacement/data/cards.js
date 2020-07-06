@@ -1,21 +1,12 @@
+import { AssembleEquipment } from "../screens";
+import { Icon } from "../../../components/styles";
 import React from "react";
-
 import Step from "../../../components/Step";
-import equipment from "./equipment";
 
 export default [
 	{
 		title: "Assemble equipment",
-		children: equipment.map(({ title, desc, icon }, key) => (
-			<Step
-				key={`equipment-${key}`}
-				active
-				inline
-				title={title}
-				desc={desc}
-				icon={icon}
-			/>
-		)),
+		children: <AssembleEquipment />,
 		link: "/ngPlacement/assembleEquipment",
 		footer: "See full equipment list",
 	},

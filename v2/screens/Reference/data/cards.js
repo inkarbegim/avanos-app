@@ -2,7 +2,7 @@ export default [
 	{
 		title: "Chest Radiograph",
 		customBackgroundImage: require("../../../public/assets/chest-radiograph.png"),
-		link: "/reference/chestRadiograph",
+		link: "/reference/chestRadiograph/A",
 	},
 	{
 		title: "CORTRAK User",
@@ -20,3 +20,5 @@ export default [
 		link: "/reference/visualColourTest",
 	},
 ];
+
+// put new images in
