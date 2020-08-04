@@ -1,6 +1,8 @@
 import * as React from "react";
+
+import { AssembleEquipment, DocumentationSteps, ExampleDoc } from "./screens";
+
 import { NgPlacement } from "./NgPlacement";
-import { AssembleEquipment } from "./screens";
 import { Route } from "react-router-native";
 
 export const Router = ({ onLoad }) => {
@@ -15,6 +17,11 @@ export const Router = ({ onLoad }) => {
 				path="/ngPlacement/assembleEquipment"
 				component={AssembleEquipment}
 			/>
+			<Route
+				path="/ngPlacement/documentationSteps"
+				component={DocumentationSteps}
+			/>
+			<Route path="/ngPlacement/exampleDoc" component={ExampleDoc} />
 		</React.Fragment>
 	);
 };

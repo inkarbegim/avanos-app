@@ -1,26 +1,27 @@
+import * as NgPlacement from "./screens/NgPlacement";
 import * as React from "react";
-import { NativeRouter, Route, Redirect } from "react-router-native";
-import Stack from "react-router-native-stack";
-
 import * as ScreenOrientation from "expo-screen-orientation";
 
-import * as NgPlacement from "./screens/NgPlacement";
-import MoreLinks from "./screens/MoreLinks";
-import * as Reference from "./screens/Reference";
-import Questions from "./screens/Questions";
+import { Animated, Dimensions, Easing, Image } from "react-native";
+import {
+	BedsidePlacement,
+	ChestRadiograph,
+	CortrakUser,
+	Reference,
+} from "./screens/Reference";
+import { NativeRouter, Redirect, Route } from "react-router-native";
 
-import theme from "./theme";
-
-import { ThemeProvider } from "styled-components/native";
-import { useFonts } from "@use-expo/font";
 import { AppLoading } from "expo";
-
-import { Animated, Image, Dimensions, Easing } from "react-native";
 import { Asset } from "expo-asset";
-
-import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 import InitialDisclaimer from "./screens/InitialDisclaimer";
+import MoreLinks from "./screens/MoreLinks";
+import Questions from "./screens/Questions";
+import Stack from "react-router-native-stack";
+import { ThemeProvider } from "styled-components/native";
+import theme from "./theme";
+import { useFonts } from "@use-expo/font";
 
 const splashAnimationDuration = 1000;
 
@@ -28,9 +29,8 @@ export default function App() {
 	const [fontsLoaded] = useFonts({
 		"Avanos Sans": require("./public/fonts/AvanosSans.otf"),
 		"Avanos Sans Bold": require("./public/fonts/AvanosSans-Bold.otf"),
+		"Avanos Sans Italic": require("./public/fonts/AvanosSans-Italic.otf"),
 	});
-
-	const [agreedToDisclaimer, setAgreedToDisclaimer] = React.useState(false);
 	const [splashLoaded, setSplashLoaded] = React.useState(false);
 	const [splashFade] = React.useState(new Animated.Value(1));
 	const [splashShowing, setSplashShowing] = React.useState(true);
@@ -96,20 +96,44 @@ export default function App() {
 										<Header>Disclaimer</Header>
 									)}
 								/>
-
 								<Route
 									path="/ngPlacement"
 									component={NgPlacement.Router}
 									headerComponent={() => (
-										<Header>NG Placement</Header>
+										<Header>Placement</Header>
 									)}
 									footerComponent={Footer}
 								/>
 								<Route
+									exact
 									path="/reference"
-									component={Reference.Router}
+									component={Reference}
 									headerComponent={() => (
-										<Header>Reference</Header>
+										<Header>Confirmation</Header>
+									)}
+									footerComponent={Footer}
+								/>
+								<Route
+									path="/reference/cortrakUser/:id"
+									component={CortrakUser}
+									headerComponent={() => (
+										<Header>CORTRAK*</Header>
+									)}
+									footerComponent={Footer}
+								/>
+								<Route
+									path="/reference/chestRadiograph/:id"
+									component={ChestRadiograph}
+									headerComponent={() => (
+										<Header>X-ray Check</Header>
+									)}
+									footerComponent={Footer}
+								/>
+								<Route
+									path="/reference/bedsidePlacement"
+									component={BedsidePlacement.Router}
+									headerComponent={() => (
+										<Header>pH Check</Header>
 									)}
 									footerComponent={Footer}
 								/>
@@ -125,7 +149,7 @@ export default function App() {
 									path="/moreLinks"
 									component={MoreLinks}
 									headerComponent={() => (
-										<Header>More Links</Header>
+										<Header>More</Header>
 									)}
 									footerComponent={Footer}
 								/>

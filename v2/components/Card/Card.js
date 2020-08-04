@@ -1,18 +1,19 @@
-import React from "react";
 import {
 	AlertBackground,
 	AlertIcon,
 	AlertTitle,
-	Outer,
-	Inner,
 	Footer,
 	Gradient,
 	Image,
+	Inner,
+	Outer,
 	Title,
 } from "./styles";
+
 import Chevron from "../../public/assets/chevron-right.svg";
-import { Paragraph } from "../styles";
 import { ImageBackground } from "react-native";
+import { Paragraph } from "../styles";
+import React from "react";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import { useHistory } from "react-router-native";
 
@@ -26,6 +27,7 @@ export const Card = ({
 	alert,
 	height,
 	link,
+	fade = true,
 	...props
 }) => {
 	const history = useHistory();
@@ -41,6 +43,15 @@ export const Card = ({
 							<AlertIcon />
 							<AlertTitle>{title}</AlertTitle>
 						</Inner>
+						{!!footer && (
+							<React.Fragment>
+								{fade && <Gradient />}
+								<Footer.Wrapper>
+									<Footer.Text>{footer}</Footer.Text>
+									<Chevron color="black" />
+								</Footer.Wrapper>
+							</React.Fragment>
+						)}
 					</AlertBackground>
 				) : (
 					<ImageBackground
@@ -59,7 +70,7 @@ export const Card = ({
 						</Inner>
 						{!!footer && (
 							<React.Fragment>
-								<Gradient />
+								{fade && <Gradient />}
 								<Footer.Wrapper>
 									<Footer.Text>{footer}</Footer.Text>
 									<Chevron color="black" />

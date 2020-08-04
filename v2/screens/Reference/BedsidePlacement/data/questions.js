@@ -1,6 +1,7 @@
 import * as React from "react";
 
-import { Bold, Paragraph, BottomRule } from "../../../../components/styles";
+import { Bold, BottomRule, Paragraph } from "../../../../components/styles";
+
 import Control from "../../../../components/Control";
 import Steps from "../../../../components/Steps";
 
@@ -19,9 +20,10 @@ const questions = [
 			</>
 		),
 		buttons: [
-			[<Control.Correct />, "B"],
-			[<Control.Incorrect />, "C"],
+			[<Control.Text>Yes</Control.Text>, "B"],
+			[<Control.Text>No</Control.Text>, "C"],
 		],
+		textControl: true,
 	},
 	{
 		id: "B",
@@ -69,9 +71,10 @@ const questions = [
 			</>
 		),
 		buttons: [
-			[<Control.Correct />, "E"],
-			[<Control.Incorrect />, "D"],
+			[<Control.Text>Yes</Control.Text>, "E"],
+			[<Control.Text>No</Control.Text>, "D"],
 		],
+		textControl: true,
 	},
 	{
 		id: "D",
@@ -90,9 +93,10 @@ const questions = [
 			</>
 		),
 		buttons: [
-			[<Control.Correct />, "E"],
-			[<Control.Incorrect />, "M"],
+			[<Control.Text>Yes</Control.Text>, "E"],
+			[<Control.Text>No</Control.Text>, "M"],
 		],
+		textControl: true,
 	},
 	{
 		id: "E",
@@ -105,9 +109,10 @@ const questions = [
 			</>
 		),
 		buttons: [
-			[<Control.Correct />, "F"],
-			[<Control.Incorrect />, "G"],
+			[<Control.Text>Yes</Control.Text>, "F"],
+			[<Control.Text>No</Control.Text>, "G"],
 		],
+		textControl: true,
 	},
 	{
 		id: "F",
@@ -167,9 +172,10 @@ const questions = [
 			</>
 		),
 		buttons: [
-			[<Control.Correct />, "F"],
-			[<Control.Incorrect />, "H"],
+			[<Control.Text>Yes</Control.Text>, "F"],
+			[<Control.Text>No</Control.Text>, "H"],
 		],
+		textControl: true,
 	},
 	{
 		id: "H",
@@ -200,7 +206,6 @@ const questions = [
 				the locally agreed 'NG tube chart'
 			</Paragraph>
 		),
-		buttons: [[<Control.Right />, "N"]],
 	},
 	{
 		id: "K",
@@ -279,12 +284,12 @@ const questions = [
 			</>
 		),
 	},
-	{
-		id: "N",
-		title: "Procedure complete",
-		body: <Paragraph>Return to reference menu</Paragraph>,
-		buttons: [[<Control.Right />, "/reference", true]],
-	},
+	// {
+	// 	id: "N",
+	// 	title: "Procedure complete",
+	// 	body: <Paragraph>Return to reference menu</Paragraph>,
+	// 	buttons: [[<Control.Right />, "/reference", true]],
+	// },
 ];
 
 export default questions;

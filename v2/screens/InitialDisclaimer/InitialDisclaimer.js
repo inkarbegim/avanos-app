@@ -1,7 +1,9 @@
-import React from "react";
+import * as Haptics from "expo-haptics";
 
+import { Button, ButtonText, ButtonWrapper, Paragraph } from "./styles";
+
+import React from "react";
 import Wrapper from "../../components/Wrapper";
-import { ButtonWrapper, Button, ButtonText, Paragraph } from "./styles";
 import { useHistory } from "react-router-native";
 
 export const InitialDisclaimer = () => {
@@ -13,6 +15,7 @@ export const InitialDisclaimer = () => {
 
 	const handleDisagree = () => {
 		// Do something really nasty!
+		Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
 	};
 
 	return (

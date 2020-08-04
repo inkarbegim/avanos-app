@@ -1,23 +1,21 @@
 export default [
 	{
-		title: "Chest Radiograph",
-		customBackgroundImage: require("../../../public/assets/chest-radiograph.png"),
-		link: "/reference/chestRadiograph/A",
-	},
-	{
-		title: "CORTRAK User",
-		customBackgroundImage: require("../../../public/assets/cortrak-eas-user.png"),
-		link: "/reference/cortrakUser/A",
-	},
-	{
-		title: "Bedside Placement",
+		title: "pH Check",
+		body: "First line",
 		customBackgroundImage: require("../../../public/assets/bedside-placement.png"),
 		link: "/reference/bedsidePlacement",
 	},
 	{
-		title: "Visual Colour Test",
-		customBackgroundImage: require("../../../public/assets/visual-colour-test.png"),
-		link: "/reference/visualColourTest",
+		title: "X-ray Check",
+		body: "Second line",
+		customBackgroundImage: require("../../../public/assets/chest-radiograph.png"),
+		link: "/reference/chestRadiograph/A",
+	},
+	{
+		title: "CORTRAK*",
+		body: "Ongoing checks",
+		customBackgroundImage: require("../../../public/assets/cortrak-eas-user.png"),
+		link: "/reference/cortrakUser/A",
 	},
 ];
 

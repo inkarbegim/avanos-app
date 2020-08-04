@@ -1,9 +1,11 @@
+import theme from "../../../theme";
+
 const assetRoot = "../../../public/assets/assemble-equipment";
 
 const equipment = [
 	{
 		title: "Trolley",
-		desc: "Must have been cleaned as per hospital policy",
+		desc: "Which has been cleaned as per hospital policy",
 		icon: require(`${assetRoot}/trolley.svg`),
 	},
 	{
@@ -11,20 +13,20 @@ const equipment = [
 		icon: require(`${assetRoot}/apron-and-gloves.svg`),
 	},
 	{
-		title: "Paper towels",
+		title: "Sterile paper towel",
 		icon: require(`${assetRoot}/paper-towel.svg`),
 	},
 	{
-		title: "Nasogastric tube",
+		title: "The required nasogastric tube",
 		desc: "(CE marked) as per NPSA 2011 guidelines",
 		icon: require(`${assetRoot}/ng-tube.svg`),
 	},
 	{
-		title: "Water",
+		title: "Sterile water",
 		icon: require(`${assetRoot}/water.svg`),
 	},
 	{
-		title: "Reciever",
+		title: "Sterile reciever",
 		desc: "(galipot)",
 		icon: require(`${assetRoot}/galipot.svg`),
 	},
@@ -33,19 +35,30 @@ const equipment = [
 		icon: require(`${assetRoot}/enteral-syringe.svg`),
 	},
 	{
-		title: "Container for aspirate",
+		title: "Recepticle for aspirate",
 		icon: require(`${assetRoot}/container-for-aspirate.svg`),
 	},
 	{
 		title: "pH indicator strips/paper",
+		desc: "(CE marked) as per NPSA (2011) guidelines e.g. aspHirate",
 		icon: require(`${assetRoot}/ph-indicator-strips.svg`),
 	},
 	{
-		title: "Nose tape",
+		title: "Suitable tape",
+		desc: (
+			<React.Fragment>
+				For fixing tube to the nose/face or{" "}
+				<Text style={{ fontFamily: theme.font.family.italic }}>
+					CORGRIP*
+				</Text>{" "}
+				retention system
+			</React.Fragment>
+		),
 		icon: require(`${assetRoot}/tape-for-nose.svg`),
 	},
 	{
-		title: "Drinking straw",
+		title: "Glass of water ",
+		desc: "(+/- straw if allowed)",
 		icon: require(`${assetRoot}/water-with-straw.svg`),
 	},
 	{
@@ -55,6 +68,11 @@ const equipment = [
 	{
 		title: "Tissues",
 		icon: require(`${assetRoot}/tissue.svg`),
+	},
+	{
+		title: "Rubbish bag",
+		desc: "Suitable for type of waste being generated",
+		icon: require(`${assetRoot}/rubbish.svg`),
 	},
 ];
 

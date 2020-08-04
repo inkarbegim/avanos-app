@@ -19,6 +19,7 @@ const theme = {
 		family: {
 			normal: "Avanos Sans",
 			bold: "Avanos Sans Bold",
+			italic: "Avanos Sans Italic",
 		},
 	},
 	border: {

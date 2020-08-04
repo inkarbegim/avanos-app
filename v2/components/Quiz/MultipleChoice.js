@@ -1,9 +1,11 @@
+import * as Haptics from "expo-haptics";
 import * as React from "react";
 
 import { ActivityIndicator } from "react-native";
 import Badge from "../Badge";
 import { Choice } from "../Panel";
 import Control from "../Control";
+import { Image } from "react-native";
 import { Title } from "./styles";
 import Wrapper from "../Wrapper";
 
@@ -33,6 +35,8 @@ export const MultipleChoice = ({ questions, onIndexChange, index }) => {
 				if (+index < questions.length) onIndexChange(+index + 1);
 			}, 500);
 		} else {
+			Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+
 			setCorrect(false);
 		}
 	};

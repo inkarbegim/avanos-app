@@ -1,13 +1,18 @@
-import React from "react";
-import { Outer, Inner, Text, BackButton } from "./styles";
-import Chevron from "../../public/assets/chevron-left.svg";
+import { BackButton, Inner, Outer, Text } from "./styles";
+import { useHistory, useLocation } from "react-router-native";
 
-export const Header = ({ children, back }) => {
+import Chevron from "../../public/assets/chevron-left.svg";
+import React from "react";
+
+export const Header = ({ children }) => {
+	const backButton = useLocation().pathname.split("/").length > 2;
+	const history = useHistory();
+
 	return (
 		<Outer>
 			<Inner>
-				{back && (
-					<BackButton>
+				{backButton && (
+					<BackButton onPress={() => history.go(-1)}>
 						<Chevron color="black" />
 					</BackButton>
 				)}

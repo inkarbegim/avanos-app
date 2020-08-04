@@ -1,31 +1,38 @@
 {
-	"name": "v2",
-	"displayName": "v2",
-	"expo": {
-		"splash": {
-			"image": "./public/assets/splash.png",
-			"resizeMode": "cover"
-		},
-		"name": "v2",
-		"slug": "v2",
-		"version": "1.0.0",
-		"platforms": ["ios", "android", "web"],
-		"assetBundlePatterns": ["**/*"],
-		"packagerOpts": {
-			"config": "metro.config.js",
-			"sourceExts": [
-				"expo.ts",
-				"expo.tsx",
-				"expo.js",
-				"expo.jsx",
-				"ts",
-				"tsx",
-				"js",
-				"jsx",
-				"json",
-				"wasm",
-				"svg"
-			]
-		}
-	}
+  "name": "v2",
+  "displayName": "v2",
+  "expo": {
+    "splash": {
+      "image": "./public/assets/splash.png",
+      "resizeMode": "cover"
+    },
+    "name": "Avanos App Beta",
+    "slug": "avanos-app-beta",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "expo.ts",
+        "expo.tsx",
+        "expo.js",
+        "expo.jsx",
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "wasm",
+        "svg"
+      ]
+    },
+    "description": ""
+  }
 }

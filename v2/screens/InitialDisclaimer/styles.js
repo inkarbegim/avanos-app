@@ -1,6 +1,6 @@
-import styled from "styled-components/native";
 import { Paragraph as DefaultParagraph } from "../../components/styles";
 import { TouchableOpacity } from "react-native";
+import styled from "styled-components/native";
 import theme from "../../theme";
 
 export const Paragraph = styled(DefaultParagraph)`
@@ -16,6 +16,7 @@ export const ButtonWrapper = styled.View`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	margin-bottom: ${theme.gutter * 2}px;
 `;
 
 export const Button = styled(TouchableOpacity)`

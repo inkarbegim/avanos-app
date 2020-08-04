@@ -12,8 +12,6 @@ export const Panel = ({ link, icon, children, external }) => {
 	const [active, setActive] = React.useState(false);
 
 	const handlePress = () => {
-		console.log({ link, external });
-
 		if (link) {
 			if (external) Linking.openURL(link);
 			else history.push(link);

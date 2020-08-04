@@ -1,9 +1,9 @@
+import { LinearGradient } from "expo-linear-gradient";
+import { Paragraph } from "../styles";
 import styled from "styled-components/native";
 import theme from "../../theme";
-import { Paragraph } from "../styles";
-import { LinearGradient } from "expo-linear-gradient";
 
-const defaultHeight = 410;
+const defaultHeight = 450;
 const footerHeight = 60;
 
 export const AlertBackground = styled.ImageBackground.attrs({

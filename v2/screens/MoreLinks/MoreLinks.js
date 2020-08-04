@@ -20,17 +20,28 @@ export const MoreLinks = () => {
 			{sections.map(({ title, links }, outerIndex) => (
 				<Section key={`ml-section-${outerIndex}`}>
 					<Title>{title}</Title>
-					{links.map(({ title, link, icon }, innerIndex) => (
+					{links.map(({ title, link, icon, png }, innerIndex) => (
 						<Panel
 							key={`ml-panel-${innerIndex}`}
 							icon={
-								<Icon
-									source={
-										icon ||
-										require("../../public/assets/doc.svg")
-									}
-									height={30}
-								/>
+								png ? (
+									<Image
+										source={icon}
+										style={{
+											resizeMode: "contain",
+											width: 30,
+											height: 30,
+										}}
+									/>
+								) : (
+									<Icon
+										source={
+											icon ||
+											require("../../public/assets/doc.svg")
+										}
+										height={30}
+									/>
+								)
 							}
 							link={link}
 							external={true}
@@ -40,7 +51,7 @@ export const MoreLinks = () => {
 					))}
 				</Section>
 			))}
-			<Section>
+			{/* <Section>
 				<Title>Contributors</Title>
 				<View
 					style={{
@@ -50,7 +61,7 @@ export const MoreLinks = () => {
 				>
 					<Image source={require("../../public/assets/logos.png")} />
 				</View>
-			</Section>
+			</Section> */}
 		</Wrapper.Scroll>
 	);
 };

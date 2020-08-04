@@ -1,7 +1,9 @@
 import * as React from "react";
-import Icon from "../Icon";
-import { iconWidth, Wrapper, IconWrapper } from "./styles";
+
+import { IconWrapper, Wrapper, iconWidth } from "./styles";
+
 import { Choice } from "../Panel";
+import Icon from "../Icon";
 
 const assetRoot = "../../public/assets";
 

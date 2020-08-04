@@ -1,6 +1,7 @@
 import * as React from "react";
 
-import { Disclaimer, Algorithm } from "./screens";
+import { Algorithm, Disclaimer } from "./screens";
+
 import { Route } from "react-router-native";
 
 export const Router = ({ onLoad }) => {

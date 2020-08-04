@@ -1,18 +1,19 @@
 import * as React from "react";
+
 import Icon from "../../Icon";
 
-const assetRoot = "../../../public/assets";
+const assetRoot = "../../../public/assets/footer";
 
 export default [
 	{
-		title: "NG Placement",
+		title: "Placement",
 		link: "/ngPlacement",
 		icon: <Icon source={require(`${assetRoot}/ng-placement.svg`)} />,
 	},
 	{
-		title: "Reference",
+		title: "Confirmation",
 		link: "/reference",
-		icon: <Icon source={require(`${assetRoot}/reference.svg`)} />,
+		icon: <Icon source={require(`${assetRoot}/confirmation.svg`)} />,
 	},
 	{
 		title: "Questions",

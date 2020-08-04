@@ -4,22 +4,27 @@ import { useHistory, useLocation } from "react-router-native";
 
 import { ActivityIndicator } from "react-native";
 import Control from "../Control";
+import { Image } from "./styles";
 import { Title } from "../styles";
 import Wrapper from "../Wrapper";
+import theme from "../../theme";
 
 export const Quiz = ({ questions, onIdChange, id }) => {
 	const history = useHistory();
-	const location = useLocation();
 
 	const [question, setQuestion] = React.useState();
 
 	React.useEffect(() => {
-		console.log({ location });
-
 		if (id && questions) {
 			setQuestion(questions.find((q) => q.id === id));
 		}
 	}, [id, questions]);
+
+	React.useEffect(() => {
+		if (question) {
+			// console.log(question.images);
+		}
+	}, [question]);
 
 	const handleButtonPress = (target, link) => {
 		if (link) history.push(target);
@@ -57,6 +62,14 @@ export const Quiz = ({ questions, onIdChange, id }) => {
 			{question.title && (
 				<Title style={{ marginBottom: 20 }}>{question.title}</Title>
 			)}
+			{question.images &&
+				question.images.map((source, key) => (
+					<Image
+						resizeMode="contain"
+						key={`card-image-${key}`}
+						source={source}
+					/>
+				))}
 			{question.body}
 		</Wrapper.Scroll>
 	) : (

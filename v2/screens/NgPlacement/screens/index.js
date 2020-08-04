@@ -1,4 +1,5 @@
 import { AssembleEquipment } from "./AssembleEquipment";
-import { MeasureLengthOfTube } from "./MeasureLengthOfTube";
+import { DocumentationSteps } from "./DocumentationSteps";
+import { ExampleDoc } from "./ExampleDoc";
 
-export { AssembleEquipment, MeasureLengthOfTube };
+export { AssembleEquipment, DocumentationSteps, ExampleDoc };

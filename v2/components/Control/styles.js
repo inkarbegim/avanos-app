@@ -9,7 +9,7 @@ export const Wrapper = styled.View`
 	justify-content: space-around;
 
 	width: ${defaultWrapperWidth + theme.gutter * 2}px;
-	padding: ${theme.gutter}px;
+	padding: 0 ${theme.gutter}px;
 	margin-top: ${theme.gutter}px;
 	margin-bottom: ${theme.gutter}px;
 
