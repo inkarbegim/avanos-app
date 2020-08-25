@@ -1,4 +1,5 @@
-import theme from "../../../theme";
+import React from "react";
+import Text from "../../../components/Text";
 
 const assetRoot = "../../../public/assets/assemble-equipment";
 
@@ -35,12 +36,17 @@ const equipment = [
 		icon: require(`${assetRoot}/enteral-syringe.svg`),
 	},
 	{
-		title: "Recepticle for aspirate",
+		title: "Receptacle for aspirate",
 		icon: require(`${assetRoot}/container-for-aspirate.svg`),
 	},
 	{
 		title: "pH indicator strips/paper",
-		desc: "(CE marked) as per NPSA (2011) guidelines e.g. aspHirate",
+		desc: (
+			<React.Fragment>
+				(CE marked) as per NPSA (2011) guidelines e.g.{" "}
+				<Text.Asphirate />
+			</React.Fragment>
+		),
 		icon: require(`${assetRoot}/ph-indicator-strips.svg`),
 	},
 	{
@@ -48,10 +54,7 @@ const equipment = [
 		desc: (
 			<React.Fragment>
 				For fixing tube to the nose/face or{" "}
-				<Text style={{ fontFamily: theme.font.family.italic }}>
-					CORGRIP*
-				</Text>{" "}
-				retention system
+				<Text.Italic>CORGRIP*</Text.Italic> retention system
 			</React.Fragment>
 		),
 		icon: require(`${assetRoot}/tape-for-nose.svg`),
