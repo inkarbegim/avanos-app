@@ -14,6 +14,7 @@ const theme = {
 		black: "#090909",
 		danger: "#ee4444",
 		success: "#44aa44",
+		orange: "#f2a240",
 	},
 	font: {
 		family: {
