@@ -1,7 +1,7 @@
 import Control from "../../../../components/Control";
 import { Paragraph } from "../../../../components/styles";
 import React from "react";
-import { Text } from "react-native";
+import Text from "../../../../components/Text";
 
 export default [
 	{
@@ -108,9 +108,9 @@ export default [
 			<Paragraph>
 				Test aspirate on CE marked pH indicator paper for use with human
 				aspirate e.g.{" "}
-				<Text style={{ fontStyle: "italic" }}>
-					aspHirate pH Indicator Strips
-				</Text>
+				<Text.Italic>
+					<Text.Asphirate /> pH Indicator Strips
+				</Text.Italic>
 			</Paragraph>
 		),
 		buttons: [
