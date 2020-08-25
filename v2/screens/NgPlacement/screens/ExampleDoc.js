@@ -1,6 +1,5 @@
 import { Dimensions, Image } from "react-native";
 
-import { Paragraph } from "../../../components/styles";
 import React from "react";
 import Wrapper from "../../../components/Wrapper";
 import theme from "../../../theme";
