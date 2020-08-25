@@ -261,9 +261,8 @@ re advance`,
 				</Text>{" "}
 				of the patient's face using an appropriate tape or{" "}
 				<Text style={{ fontFamily: theme.font.family.italic }}>
-					CORGRIP*
-				</Text>{" "}
-				retention system
+					CORGRIP* retention system
+				</Text>
 			</Paragraph>
 		),
 		imageProps: {
