@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import questions from "./data/questions";
-import { MultipleChoice } from "../../components/Quiz";
-
 import { useHistory, useParams } from "react-router-native";
+
+import { MultipleChoice } from "../../components/Quiz";
+import questions from "./data/questions";
 
 export const Questions = ({ onLoad }) => {
 	const params = useParams();
@@ -15,7 +15,8 @@ export const Questions = ({ onLoad }) => {
 	}, []);
 
 	const handleIndexChange = (index) => {
-		history.push(`/questions/${index}`);
+		if (index < questions.length) history.push(`/questions/${index}`);
+		else history.push("/reference");
 	};
 
 	return (

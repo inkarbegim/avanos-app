@@ -1,13 +1,29 @@
 import * as React from "react";
 
-import PunchFilled from "../../public/assets/punch-filled.svg";
-import PunchEmpty from "../../public/assets/punch-empty.svg";
-import { Outer, TouchListener, Inner, Background, Body } from "./styles";
+import { Background, Body, Inner, Outer, TouchListener } from "./styles";
 
 import { Animated } from "react-native";
+import PunchEmpty from "../../public/assets/punch-empty.svg";
+import PunchFilled from "../../public/assets/punch-filled.svg";
 
-export const Choice = ({ selected, attempted, correct, onPress, children }) => {
+export const Choice = ({
+	selected: initialSelected,
+	attempted,
+	correct,
+	onPress,
+	children,
+	fillOnPress,
+}) => {
 	const [wiggle] = React.useState(new Animated.Value(0));
+	const [selected, setSelected] = React.useState(initialSelected);
+
+	const handlePress = (...params) => {
+		if (fillOnPress) {
+			setSelected(true);
+		}
+
+		onPress(...params);
+	};
 
 	const startWiggle = () => {
 		Animated.sequence([
@@ -49,7 +65,7 @@ export const Choice = ({ selected, attempted, correct, onPress, children }) => {
 			correct={correct}
 		>
 			<Background source={require("../../public/assets/transparent.png")}>
-				<TouchListener onPress={onPress}>
+				<TouchListener onPress={handlePress}>
 					<Inner>
 						{selected ? (
 							<PunchFilled width={30} />

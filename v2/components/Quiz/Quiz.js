@@ -1,13 +1,11 @@
 import * as React from "react";
 
-import { useHistory, useLocation } from "react-router-native";
-
 import { ActivityIndicator } from "react-native";
 import Control from "../Control";
 import { Image } from "./styles";
 import { Title } from "../styles";
 import Wrapper from "../Wrapper";
-import theme from "../../theme";
+import { useHistory } from "react-router-native";
 
 export const Quiz = ({ questions, onIdChange, id }) => {
 	const history = useHistory();
@@ -19,12 +17,6 @@ export const Quiz = ({ questions, onIdChange, id }) => {
 			setQuestion(questions.find((q) => q.id === id));
 		}
 	}, [id, questions]);
-
-	React.useEffect(() => {
-		if (question) {
-			// console.log(question.images);
-		}
-	}, [question]);
 
 	const handleButtonPress = (target, link) => {
 		if (link) history.push(target);
@@ -40,6 +32,7 @@ export const Quiz = ({ questions, onIdChange, id }) => {
 							([element, target, link = false], key) =>
 								React.cloneElement(element, {
 									key: `control-quiz-${key}`,
+									fillOnPress: true,
 									onPress: handleButtonPress.bind(
 										this,
 										target,
@@ -50,7 +43,7 @@ export const Quiz = ({ questions, onIdChange, id }) => {
 					</React.Fragment>
 				) : (
 					<Control.Text onPress={() => history.push("/reference")}>
-						Return to main menu
+						Return to menu
 					</Control.Text>
 				)
 			}

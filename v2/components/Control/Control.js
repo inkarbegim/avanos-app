@@ -63,7 +63,7 @@ export const Control = {
 	),
 
 	Text: ({ onPress, children, ...props }) => (
-		<Choice selected onPress={onPress} {...props}>
+		<Choice onPress={onPress} {...props}>
 			{/* For some reason all the panels become 
 			one-liners if you don't repaint with the badge, 
 			hence the random key */}

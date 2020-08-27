@@ -3,7 +3,11 @@ import * as React from "react";
 import { Bold, BottomRule, Paragraph } from "../../../../components/styles";
 
 import Control from "../../../../components/Control";
+import Icon from "../../../../components/Icon";
+import { Panel } from "../../../../components/Panel";
 import Steps from "../../../../components/Steps";
+import Text from "../../../../components/Text";
+import theme from "../../../../theme";
 
 const questions = [
 	{
@@ -43,18 +47,21 @@ const questions = [
 				</Paragraph>
 				<Paragraph>
 					When on gastric acid suppression, on checking position of NG
-					tube at first insertion, if the pH is recurrently above 5.5,
-					X-ray confirmation of NG tube is mandatory to confirm the
-					position on first insertion.
+					tube <Text.Bold>at first insertion</Text.Bold>, if the pH is
+					recurrently above 5.5, X-ray confirmation of NG tube is
+					mandatory to confirm the position on first insertion.
 				</Paragraph>
 				<Paragraph>
 					When on gastric acid suppression, on checking position of NG
-					tube consequently to initially correct position
-					confirmation, if the pH is recurrently above 5.5 the NPSA
-					recommend use of surrogate markers of position to include
-					‘NEX’ exact length confirmation and non-displacement of
-					fixation tapes. This is only in this exact context in the
-					absence of vomiting, retching, coughing and unexpected
+					tube{" "}
+					<Text.Bold>
+						consequently to initially correct position confirmation
+					</Text.Bold>
+					, if the pH is recurrently above 5.5 the NPSA recommend use
+					of surrogate markers of position to include ‘NEX’ exact
+					length confirmation and non-displacement of fixation tapes.
+					This is <Text.Bold>only</Text.Bold> in this exact context in
+					the absence of vomiting, retching, coughing and unexpected
 					respiratory distress.
 				</Paragraph>
 			</>
@@ -65,11 +72,7 @@ const questions = [
 		id: "C",
 		title:
 			"Previously inserted NG tubes need to be rechecked after breaks of use",
-		body: (
-			<>
-				<Paragraph>Is this a newly inserted NG tube?</Paragraph>
-			</>
-		),
+		body: <Paragraph>Is this a newly inserted NG tube?</Paragraph>,
 		buttons: [
 			[<Control.Text>Yes</Control.Text>, "E"],
 			[<Control.Text>No</Control.Text>, "D"],
@@ -101,12 +104,9 @@ const questions = [
 	{
 		id: "E",
 		body: (
-			<>
-				<Paragraph>
-					Can you gently aspirate 0.5-1ml of fluid using a 50ml
-					syringe?
-				</Paragraph>
-			</>
+			<Paragraph>
+				Can you gently aspirate 0.5-1ml of fluid using a 50ml syringe?
+			</Paragraph>
 		),
 		buttons: [
 			[<Control.Text>Yes</Control.Text>, "F"],
@@ -123,9 +123,24 @@ const questions = [
 					If 0.5-1ml of aspirate has been gained, test on pH strip.
 				</Paragraph>
 				<Paragraph>
-					<Bold>Do not</Bold> use blue litmus paper.
+					<Text.Bold>Do not</Text.Bold> use blue litmus paper.
 				</Paragraph>
-				<Paragraph>What is the pH?</Paragraph>
+				<Paragraph style={{ marginBottom: theme.gutter }}>
+					What is the pH?
+				</Paragraph>
+
+				<Panel
+					icon={
+						<Icon
+							source={require(`../../../../public/assets/eye.svg`)}
+							height={30}
+						/>
+					}
+					link={`https://www.xrite.com/hue-test`}
+					external={true}
+				>
+					Visual Colour Test
+				</Panel>
 			</>
 		),
 		buttons: [
@@ -152,8 +167,13 @@ const questions = [
 								"If possible turn patient to left side and re-try",
 						},
 						{
-							title:
-								"Inject 10-20ml of air into the tube using a syringe, wait 15-30min and re-try aspriation",
+							title: (
+								<React.Fragment>
+									Inject 10-20ml of <Text.Bold>air</Text.Bold>{" "}
+									into the tube using a syringe, wait 15-30min
+									and re-try aspriation
+								</React.Fragment>
+							),
 						},
 						{
 							title:

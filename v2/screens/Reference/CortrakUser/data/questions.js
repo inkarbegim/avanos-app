@@ -20,7 +20,10 @@ export default [
 		body: (
 			<Paragraph>
 				Test aspirate on CE marked pH indicator paper for use with human
-				aspirate
+				aspirate e.g.{" "}
+				<Text.Italic>
+					<Text.Asphirate /> pH Indicator Strips
+				</Text.Italic>
 			</Paragraph>
 		),
 		buttons: [
@@ -78,7 +81,9 @@ export default [
 					confirmation of nasogastric tube position in stomach at all
 					times.
 				</Paragraph>
-				<Paragraph>Is the NG tube in the correct place?</Paragraph>
+				<Paragraph>
+					<Text.Bold>Is the NG tube in the correct place?</Text.Bold>
+				</Paragraph>
 			</React.Fragment>
 		),
 		buttons: [

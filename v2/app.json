@@ -6,8 +6,8 @@
       "image": "./public/assets/splash.png",
       "resizeMode": "cover"
     },
-    "name": "Avanos App Beta",
-    "slug": "avanos-app-beta",
+    "name": "NG Tube",
+    "slug": "ng-tube",
     "version": "1.0.0",
     "platforms": [
       "ios",

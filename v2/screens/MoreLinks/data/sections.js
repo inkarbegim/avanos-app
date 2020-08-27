@@ -33,6 +33,10 @@ export default [
 				link: `https://www.xrite.com/hue-test`,
 				icon: require(`${assetRoot}/eye.svg`),
 			},
+			{
+				title: "Nasogastric and X-Ray Courses",
+				link: "https://www.avanosacademy.com",
+			},
 		],
 	},
 	{

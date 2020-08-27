@@ -1,22 +1,22 @@
 const questions = [
-	{
-		title:
-			"Why are the stylet ports on the Corflo tubes different colours?",
-		buttons: [
-			["To allow easier flushing", false],
-			["To identify the length of the tube", true],
-			["To identify the french size of the tube", false],
-			["The colour has no purpose", false],
-		],
-	},
-	{
-		title: "What does 'Single Patient Use' mean?",
-		buttons: [
-			["The tube can be re-passed on the same patient", true],
-			["The tube can be used only once on the patient", false],
-			["The tube can be passed twice on the same patient", false],
-		],
-	},
+	// {
+	// 	title:
+	// 		"Why are the stylet ports on the Corflo tubes different colours?",
+	// 	buttons: [
+	// 		["To allow easier flushing", false],
+	// 		["To identify the length of the tube", true],
+	// 		["To identify the french size of the tube", false],
+	// 		["The colour has no purpose", false],
+	// 	],
+	// },
+	// {
+	// 	title: "What does 'Single Patient Use' mean?",
+	// 	buttons: [
+	// 		["The tube can be re-passed on the same patient", true],
+	// 		["The tube can be used only once on the patient", false],
+	// 		["The tube can be passed twice on the same patient", false],
+	// 	],
+	// },
 	{
 		title:
 			"What is the NPSA recommendation for first line confirmation of Nasogastric Tube placement?",
