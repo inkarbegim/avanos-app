@@ -24,7 +24,7 @@ const options = [
 	{
 		title: "Multiple Choice Questions",
 		icon: <Icon source={require(`${assetRoot}/question.svg`)} />,
-		link: "/multipleChoiceQuestions/0",
+		link: "/Questions/0",
 	},
 	{
 		title: "Useful Links",

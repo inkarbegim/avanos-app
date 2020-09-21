@@ -1,28 +1,35 @@
 import styled from "styled-components/native";
-import { Dimensions } from "react-native";
+import theme from "../../theme";
 
 export const iconWidth = 62;
+const defaultWrapperWidth = 200;
 
 export const Wrapper = styled.View`
-	height: ${iconWidth}px;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 
-	${({ inline, width }) => `
-	width: ${width}px;
-	${
-		inline
-			? `margin: 10px auto;`
-			: ` position: absolute;
-				top: ${Dimensions.get("screen").height - 20 - iconWidth * 2}px;
-				left: ${Dimensions.get("screen").width / 2 - width / 2}px;`
-	}`}
+	width: ${defaultWrapperWidth + theme.gutter * 2}px;
+	padding: 0 ${theme.gutter}px;
+	margin-top: ${theme.gutter}px;
+	margin-bottom: ${theme.gutter}px;
+
+	${({ textControl }) => `
+		${
+			!textControl &&
+			`margin-left: auto; margin-right: auto; height: ${
+				iconWidth + theme.gutter
+			}px`
+		};
+		flex-direction: ${textControl ? "column" : "row"};
+		width: ${textControl ? "100%" : `${defaultWrapperWidth}px`};
+	`}
 `;
 
 export const IconWrapper = styled.TouchableOpacity`
 	width: ${iconWidth}px;
 	height: ${iconWidth}px;
-	${({ theme }) => theme.shadow};
+	background-color: ${theme.color.white};
+	border-radius: ${iconWidth}px;
+	${theme.shadow};
 	${({ disabled }) => disabled && `opacity: 0.25`};
 `;

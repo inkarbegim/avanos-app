@@ -1,7 +1,9 @@
 import * as React from "react";
-import { StepByStep } from "../NgPlacement-OLD/StepByStep";
-import { AssembleEquipment, MeasureLengthOfTube } from "./screens";
-import { Switch, Route } from "react-router-native";
+
+import { AssembleEquipment, DocumentationSteps, ExampleDoc } from "./screens";
+
+import { NgPlacement } from "./NgPlacement";
+import { Route } from "react-router-native";
 
 export const Router = ({ onLoad }) => {
 	React.useEffect(() => {
@@ -9,16 +11,17 @@ export const Router = ({ onLoad }) => {
 	}, []);
 
 	return (
-		<Switch>
-			<Route path="/ngPlacement" exact component={StepByStep} />
+		<React.Fragment>
+			<Route path="/ngPlacement" exact component={NgPlacement} />
 			<Route
 				path="/ngPlacement/assembleEquipment"
 				component={AssembleEquipment}
 			/>
 			<Route
-				path="/ngPlacement/measureLengthOfTube"
-				component={MeasureLengthOfTube}
+				path="/ngPlacement/documentationSteps"
+				component={DocumentationSteps}
 			/>
-		</Switch>
+			<Route path="/ngPlacement/exampleDoc" component={ExampleDoc} />
+		</React.Fragment>
 	);
 };

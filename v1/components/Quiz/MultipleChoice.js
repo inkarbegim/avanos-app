@@ -1,39 +1,67 @@
+import * as Haptics from "expo-haptics";
 import * as React from "react";
-import { Title } from "../styles";
+
 import { ActivityIndicator } from "react-native";
-import Control from "../Control";
 import Badge from "../Badge";
 import { Choice } from "../Panel";
+import Control from "../Control";
+import { Image } from "react-native";
+import { Title } from "./styles";
+import Wrapper from "../Wrapper";
 
 export const MultipleChoice = ({ questions, onIndexChange, index }) => {
+	const ref = React.useRef(null);
+
 	const [question, setQuestion] = React.useState();
 	const [selected, setSelected] = React.useState(null);
-	const [showBadge, setShowBadge] = React.useState(false);
+	const [attempted, setAttempted] = React.useState(false);
+	const [correct, setCorrect] = React.useState(false);
 
 	React.useEffect(() => {
-		console.log("index", index);
 		if (index && questions) {
 			setQuestion(questions[index]);
 		}
 	}, [index, questions]);
 
 	const handleNext = () => {
-		if (question.buttons[selected][1] === true) {
-			setSelected(null);
-			setShowBadge(false);
+		setAttempted(true);
 
-			if (+index < questions.length) onIndexChange(+index + 1);
+		if (question.buttons[selected][1] === true) {
+			setCorrect(true);
+
+			// Delay so the user can see the positive feedback
+			window.setTimeout(() => {
+				setSelected(null);
+				if (+index < questions.length) onIndexChange(+index + 1);
+			}, 500);
 		} else {
-			setShowBadge(true);
+			Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+
+			setCorrect(false);
 		}
 	};
 
+	const handleSelect = (key) => {
+		setAttempted(false);
+		setSelected(key);
+	};
+
+	React.useEffect(() => {}, [selected]);
+
 	React.useEffect(() => {
-		setShowBadge(false);
-	}, [selected]);
+		if (ref.current) ref.current.scrollTo({ y: 0 });
+	}, []);
 
 	return question ? (
-		<>
+		<Wrapper.Scroll
+			ref={ref}
+			control={
+				<Control.Right
+					disabled={selected === null}
+					onPress={handleNext}
+				/>
+			}
+		>
 			{question.title && (
 				<Title style={{ marginBottom: 20 }}>{question.title}</Title>
 			)}
@@ -41,8 +69,9 @@ export const MultipleChoice = ({ questions, onIndexChange, index }) => {
 			{question.buttons.map(([text, correct], key) => (
 				<Choice
 					selected={selected === key}
-					onPress={() => setSelected(key)}
-					wrong={selected === key && showBadge && !correct}
+					onPress={handleSelect.bind(null, key)}
+					attempted={selected === key && attempted}
+					correct={correct}
 					key={`mcq-${index}-${key}-${Math.random()}`}
 				>
 					{/* For some reason all the panels become 
@@ -52,15 +81,10 @@ export const MultipleChoice = ({ questions, onIndexChange, index }) => {
 				</Choice>
 			))}
 
-			<Badge hidden={!showBadge}>Wrong answer</Badge>
-
-			<Control.Wrapper inline>
-				<Control.Right
-					disabled={selected === null}
-					onPress={handleNext}
-				/>
-			</Control.Wrapper>
-		</>
+			<Badge variant={correct ? "success" : "danger"} show={attempted}>
+				{correct ? "Correct" : "Wrong"} answer
+			</Badge>
+		</Wrapper.Scroll>
 	) : (
 		<ActivityIndicator />
 	);

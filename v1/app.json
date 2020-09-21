@@ -1,20 +1,36 @@
 {
-	"name": "Avanos App",
-	"displayName": "Avanos App",
-	"sdkVersion": "37.0.0",
-	"expo": {
-		"name": "Avanos App",
-		"slug": "avanos_app",
-		"version": "1.0.0",
-		"platforms": ["ios", "android", "web"],
-		"assetBundlePatterns": ["**/*"],
-		"packagerOpts": {
-			"config": "metro.config.js",
-			"sourceExts": ["js", "jsx", "svg", "ts", "tsx"]
-		},
-		"ios": {
-			"requireFullScreen": true
-		},
-		"description": ""
-	}
+  "expo": {
+    "name": "NG Tube",
+    "slug": "ng-tube",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "splash": {
+      "image": "./public/assets/splash.png",
+      "resizeMode": "cover"
+    },
+    "icon": "./assets/icon.png",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "js",
+        "jsx",
+        "svg",
+        "ts",
+        "tsx"
+      ]
+    },
+    "description": ""
+  }
 }

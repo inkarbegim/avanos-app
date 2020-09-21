@@ -8,6 +8,7 @@ export const Outer = styled.View`
 	padding-bottom: ${theme.gutter}px;
 	flex: 1;
 	position: relative;
+	display: flex;
 `;
 
 export const Fixed = ({ children, outerProps, innerProps }) => (

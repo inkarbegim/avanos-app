@@ -1,3 +1,3 @@
-import { NgPlacement } from "./NgPlacement";
+import { Router } from "./Router";
 
-export default NgPlacement;
+export { Router };

@@ -1,9 +1,10 @@
 import styled from "styled-components/native";
 import { Paragraph } from "../styles";
-import { Link } from "react-router-native";
-// import { Animated } from "react-native";
+import { Animated, SafeAreaView } from "react-native";
 
-export const Wrapper = styled.View`
+export const Wrapper = styled(SafeAreaView)`
+	position: relative;
+	z-index: 1000;
 	align-items: center;
 	align-self: flex-end;
 	display: flex;
@@ -12,23 +13,17 @@ export const Wrapper = styled.View`
 	${({ theme }) => theme.border.light("top")}
 `;
 
-const hasNotch =
-	Platform.OS === "ios" &&
-	Expo.Constants.platform.ios.model.toLowerCase().includes("iphone x");
-
 export const Tab = {
 	Outer: styled.TouchableWithoutFeedback`
 		flex: 1;
-		${hasNotch && `padding-bottom: 20px;`}
-	`,
-	Link: styled(Link)`
-		width: 25%;
-	`,
-	// Inner: styled(Animated.View)`
-	Inner: styled.View`
-		padding: 15px 0 0;
-		background-color: white;
 		display: flex;
+		background-color: white;
+	`,
+	Inner: styled(Animated.View)`
+		padding: 15px 0 0;
+
+		display: flex;
+		flex: 1;
 		justify-content: center;
 		align-items: center;
 		${({ active }) => (active ? `opacity: 1` : `opacity: 0.5`)};

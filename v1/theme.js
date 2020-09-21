@@ -5,24 +5,27 @@ const theme = {
 	shadow: `
 	border: 1px solid #efefef;
 	shadow-color: #000;
-	shadow-offset: {width: 5, height: 2};
 	shadow-opacity: 0.05;
-	shadow-radius: 5px;
+	shadow-radius: 10px;
 	elevation: 1`,
 	color: {
 		white: "#fefefe",
 		grey: "#efefef",
 		black: "#090909",
 		danger: "#ee4444",
+		success: "#44aa44",
+		orange: "#f2a240",
 	},
 	font: {
 		family: {
 			normal: "Avanos Sans",
 			bold: "Avanos Sans Bold",
+			italic: "Avanos Sans Italic",
 		},
 	},
 	border: {
 		danger: `border: 1px solid #ee4444`,
+		success: `border: 1px solid #44aa44`,
 		light: (side) => {
 			if (side) {
 				return `

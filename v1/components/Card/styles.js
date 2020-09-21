@@ -1,9 +1,9 @@
+import { LinearGradient } from "expo-linear-gradient";
+import { Paragraph } from "../styles";
 import styled from "styled-components/native";
 import theme from "../../theme";
-import { Paragraph } from "../styles";
-import { LinearGradient } from "expo-linear-gradient";
 
-const height = 410;
+const defaultHeight = 450;
 const footerHeight = 60;
 
 export const AlertBackground = styled.ImageBackground.attrs({
@@ -33,10 +33,11 @@ export const Outer = styled.View`
 	border-radius: ${theme.borderRadius}px;
 	${theme.shadow};
 	${theme.border.light()};
-	height: ${height}px;
 	position: relative;
 	display: flex;
 	margin-bottom: ${theme.gutter}px;
+
+	height: ${({ height }) => (height ? height : defaultHeight)}px;
 `;
 
 export const Inner = styled.View`
@@ -56,7 +57,7 @@ export const Gradient = styled(LinearGradient).attrs({
 	colors: ["#ffffff00", "#fff"],
 })`
 	position: absolute;
-	height: ${height - footerHeight}px;
+	height: ${defaultHeight - footerHeight}px;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -88,6 +89,6 @@ export const Footer = {
 		font-family: ${theme.font.family.normal};
 		font-size: 18px;
 		margin-bottom: 0;
-		line-height 18px;
+		line-height: 18px;
 	`,
 };

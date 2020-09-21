@@ -4,6 +4,8 @@ import Alert from "../Alert";
 import Wrapper from "../Wrapper";
 import Control from "../Control";
 
+// Legacy, broken
+
 export const Steps = ({ steps, isStatic }) => {
 	const scrollWrapper = React.useRef(null);
 	const [activeIndex, setActiveIndex] = React.useState(0);
@@ -80,6 +82,9 @@ export const Steps = ({ steps, isStatic }) => {
 					})}
 				</containerElem.current>
 			)}
+
+			{/* This is broken. Legacy */}
+
 			{!isStatic && (
 				<Control.Wrapper>
 					<Control.Up onPress={handleUp} />

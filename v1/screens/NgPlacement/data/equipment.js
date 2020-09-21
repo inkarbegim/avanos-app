@@ -1,76 +1,81 @@
-import * as React from "react";
+import React from "react";
+import Text from "../../../components/Text";
 
-import Trolley from "../../../public/assets/trolley.svg";
-import ApronGloves from "../../../public/assets/apron-gloves.svg";
-import PaperTowels from "../../../public/assets/paper-towels.svg";
-import NgTube from "../../../public/assets/ng-tube.svg";
-import Water from "../../../public/assets/water.svg";
-import Galipot from "../../../public/assets/galipot.svg";
-import EnteralSyringe from "../../../public/assets/enteral-syringe.svg";
-import AspirateContainer from "../../../public/assets/aspirate-container.svg";
-import PHIindicator from "../../../public/assets/ph-indicator.svg";
-
-import Icon from "../../../components/Icon";
-
-const assetRoot = "../../../public/assets";
+const assetRoot = "../../../public/assets/assemble-equipment";
 
 const equipment = [
 	{
 		title: "Trolley",
-		desc: "Must have been cleaned as per hospital policy",
-		icon: (
-			<Icon source={require(`${assetRoot}/trolley.svg`)} color="black" />
-		),
+		desc: "Which has been cleaned as per hospital policy",
+		icon: require(`${assetRoot}/trolley.svg`),
 	},
 	{
 		title: "Apron and gloves",
-		icon: (
-			<Icon source={require(`${assetRoot}/trolley.svg`)} color="black" />
-		),
+		icon: require(`${assetRoot}/apron-and-gloves.svg`),
 	},
 	{
-		title: "Paper towels",
-		icon: (
-			<Icon source={require(`${assetRoot}/trolley.svg`)} color="black" />
-		),
+		title: "Sterile paper towel",
+		icon: require(`${assetRoot}/paper-towel.svg`),
 	},
 	{
-		title: "Nasogastric tube",
+		title: "The required nasogastric tube",
 		desc: "(CE marked) as per NPSA 2011 guidelines",
-		icon: (
-			<Icon source={require(`${assetRoot}/trolley.svg`)} color="black" />
-		),
+		icon: require(`${assetRoot}/ng-tube.svg`),
 	},
 	{
-		title: "Water",
-		icon: (
-			<Icon source={require(`${assetRoot}/trolley.svg`)} color="black" />
-		),
+		title: "Sterile water",
+		icon: require(`${assetRoot}/water.svg`),
 	},
 	{
-		title: "Reciever",
+		title: "Sterile receiver",
 		desc: "(galipot)",
-		icon: (
-			<Icon source={require(`${assetRoot}/trolley.svg`)} color="black" />
-		),
+		icon: require(`${assetRoot}/galipot.svg`),
 	},
 	{
 		title: "Enteral syringe",
-		icon: (
-			<Icon source={require(`${assetRoot}/trolley.svg`)} color="black" />
-		),
+		icon: require(`${assetRoot}/enteral-syringe.svg`),
 	},
 	{
-		title: "Container from aspirate",
-		icon: (
-			<Icon source={require(`${assetRoot}/trolley.svg`)} color="black" />
-		),
+		title: "Receptacle for aspirate",
+		icon: require(`${assetRoot}/container-for-aspirate.svg`),
 	},
 	{
 		title: "pH indicator strips/paper",
-		icon: (
-			<Icon source={require(`${assetRoot}/trolley.svg`)} color="black" />
+		desc: (
+			<React.Fragment>
+				(CE marked) as per NPSA (2011) guidelines e.g.{" "}
+				<Text.Asphirate />
+			</React.Fragment>
 		),
+		icon: require(`${assetRoot}/ph-indicator-strips.svg`),
+	},
+	{
+		title: "Suitable tape",
+		desc: (
+			<React.Fragment>
+				For fixing tube to the nose/face or{" "}
+				<Text.Italic>CORGRIP*</Text.Italic> retention system
+			</React.Fragment>
+		),
+		icon: require(`${assetRoot}/tape-for-nose.svg`),
+	},
+	{
+		title: "Glass of water ",
+		desc: "(+/- straw if allowed)",
+		icon: require(`${assetRoot}/water-with-straw.svg`),
+	},
+	{
+		title: "Vomit bowl",
+		icon: require(`${assetRoot}/vomit-bowl.svg`),
+	},
+	{
+		title: "Tissues",
+		icon: require(`${assetRoot}/tissue.svg`),
+	},
+	{
+		title: "Rubbish bag",
+		desc: "Suitable for type of waste being generated",
+		icon: require(`${assetRoot}/rubbish.svg`),
 	},
 ];
 

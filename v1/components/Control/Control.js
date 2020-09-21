@@ -1,25 +1,15 @@
 import * as React from "react";
+
+import { IconWrapper, Wrapper, iconWidth } from "./styles";
+
+import { Choice } from "../Panel";
 import Icon from "../Icon";
-import { iconWidth, Wrapper, IconWrapper } from "./styles";
-import { Button } from "react-native";
 
 const assetRoot = "../../public/assets";
 
-const calculateWrapperWidth = (children) => {
-	if (children.hasOwnProperty("length")) {
-		const { length } = children;
-		const margin = ((length - 1) * iconWidth) / 1.5;
-		return length * iconWidth + margin;
-	} else {
-		return iconWidth;
-	}
-};
-
 export const Control = {
-	Wrapper: ({ children, inline }) => (
-		<Wrapper inline={inline} width={calculateWrapperWidth(children)}>
-			{children}
-		</Wrapper>
+	Wrapper: ({ children, ...props }) => (
+		<Wrapper {...props}>{children}</Wrapper>
 	),
 	Up: ({ onPress, disabled, ...props }) => (
 		<IconWrapper onPress={onPress} disabled={disabled}>
@@ -72,7 +62,14 @@ export const Control = {
 		</IconWrapper>
 	),
 
-	Text: ({ onPress, children, disabled, ...props }) => (
-		<Button onPress={onPress} title={children} {...props} />
+	Text: ({ onPress, children, ...props }) => (
+		<Choice onPress={onPress} {...props}>
+			{/* For some reason all the panels become 
+			one-liners if you don't repaint with the badge, 
+			hence the random key */}
+			{children}
+		</Choice>
+
+		// <Button onPress={onPress} title={children} {...props} />
 	),
 };

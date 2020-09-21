@@ -3,14 +3,14 @@ import styled from "styled-components/native";
 export const Wrapper = styled.View`
 	padding: 7px 20px 2px;
 	border-radius: 40px;
-	background-color: ${({ theme }) => theme.color.danger};
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
 
-	${({ hidden }) => hidden && "display: none"}
+	background-color: ${({ variant, theme }) => theme.color[variant]};
+	${({ show }) => !show && "display: none"};
 `;
 
 export const Text = styled.Text`

@@ -1,14 +1,13 @@
 import * as React from "react";
 
-import Header from "../Header";
 import Footer from "../Footer";
+import { SafeAreaView } from "react-native";
 
 export const Layout = ({ children }) => {
 	return (
-		<>
-			<Header />
+		<SafeAreaView style={{ flex: 1, paddingTop: 10 }}>
 			{children}
-			<Footer />
-		</>
+			{/* <Footer /> */}
+		</SafeAreaView>
 	);
 };
