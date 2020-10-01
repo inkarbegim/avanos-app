@@ -84,8 +84,6 @@ export const MultipleChoice = ({ questions, onIndexChange, index }) => {
 			<Badge variant={correct ? "success" : "danger"} show={attempted}>
 				{correct ? "Correct" : "Wrong"} answer
 			</Badge>
-
-            {question.}
 		</Wrapper.Scroll>
 	) : (
 		<ActivityIndicator />
