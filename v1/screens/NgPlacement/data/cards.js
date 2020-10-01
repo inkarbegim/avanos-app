@@ -211,7 +211,7 @@ export default [
 		title: "Inkar's Card",
 		children: (
 			<Paragraph>
-				Something should be here :) {" "}
+				Something should be here{" "}
 				<Text
 					style={{
 						fontFamily: theme.font.family.bold,
