@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\v1",
+    "\\v1\\screens",
+    "\\v1\\screens\\Archive",
+    "\\v1\\screens\\Archive\\Home",
+    "\\v1\\screens\\NgPlacement",
+    "\\v1\\screens\\NgPlacement\\data",
+    "\\v1\\screens\\NgPlacement\\screens",
+    "\\v1\\screens\\Questions",
+    "\\v1\\screens\\Questions\\data"
+  ],
+  "SelectedNode": "\\v1\\screens\\NgPlacement\\data\\cards.js",
+  "PreviewInSolutionExplorer": false
+}

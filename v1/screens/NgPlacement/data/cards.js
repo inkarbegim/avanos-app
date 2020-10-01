@@ -207,10 +207,36 @@ export default [
 			},
 		},
 	},
+    {
+		title: "Inkar's Card",
+		children: (
+			<Paragraph>
+				Something should be here :) {" "}
+				<Text
+					style={{
+						fontFamily: theme.font.family.bold,
+					}}
+				>
+					with head slightly tilted forward
+				</Text>{" "}
+				– (at this stage offer the patient a drink if it is safe to do
+				so) – as the patient swallows advance the tube gently and slowly
+				until the predetermined measurement is reached
+			</Paragraph>
+		),
+		imageProps: {
+			source: require(`${assetRoot}/swallow.png`),
+			style: {
+				width: 175,
+				height: 175,
+				resizeMode: "contain",
+			},
+		},
+	},
 	{
 		alert: true,
-		title: `Never force the tube. 
-If any resistance is felt, withdraw the tube and 
+		title: `Never force the tube.
+If any resistance is felt, withdraw the tube and
 readvance`,
 	},
 	{

@@ -74,8 +74,8 @@ export const MultipleChoice = ({ questions, onIndexChange, index }) => {
 					correct={correct}
 					key={`mcq-${index}-${key}-${Math.random()}`}
 				>
-					{/* For some reason all the panels become 
-					one-liners if you don't repaint with the badge, 
+					{/* For some reason all the panels become
+					one-liners if you don't repaint with the badge,
 					hence the random key */}
 					{text}
 				</Choice>
@@ -84,6 +84,8 @@ export const MultipleChoice = ({ questions, onIndexChange, index }) => {
 			<Badge variant={correct ? "success" : "danger"} show={attempted}>
 				{correct ? "Correct" : "Wrong"} answer
 			</Badge>
+
+            {question.}
 		</Wrapper.Scroll>
 	) : (
 		<ActivityIndicator />
