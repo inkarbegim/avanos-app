@@ -8,6 +8,7 @@ import Control from "../Control";
 import { Image } from "react-native";
 import { Title } from "./styles";
 import Wrapper from "../Wrapper";
+import { Text } from 'react-native';
 
 export const MultipleChoice = ({ questions, onIndexChange, index }) => {
 	const ref = React.useRef(null);
@@ -52,6 +53,8 @@ export const MultipleChoice = ({ questions, onIndexChange, index }) => {
 		if (ref.current) ref.current.scrollTo({ y: 0 });
 	}, []);
 
+    var qc = index*1 + 1;
+
 	return question ? (
 		<Wrapper.Scroll
 			ref={ref}
@@ -84,6 +87,11 @@ export const MultipleChoice = ({ questions, onIndexChange, index }) => {
 			<Badge variant={correct ? "success" : "danger"} show={attempted}>
 				{correct ? "Correct" : "Wrong"} answer
 			</Badge>
+
+			<Text style ={{
+                alignSelf:'center',
+			}}>
+			 Question {qc} of {questions.length}</Text>
 		</Wrapper.Scroll>
 	) : (
 		<ActivityIndicator />
